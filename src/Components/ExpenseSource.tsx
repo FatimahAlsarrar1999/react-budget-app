@@ -6,8 +6,10 @@ const ExpenseSource = () => {
         <div>
           <form>
             <div>
+              <div>
               <label htmlFor="amount">Expence Sourse</label><br/>
               <input type="number" name="amount" id="amount" /><br/>
+              </div>
               <label htmlFor="amount">Amount Of Expense</label><br/>
               <input type="number" name="amount" id="amount" /><br/>
               <label htmlFor="amount">Expense Date</label><br/><br/>

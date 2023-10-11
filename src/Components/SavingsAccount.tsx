@@ -5,9 +5,11 @@ const SavingsAccount = () => {
         <>
 
         <p> Current Balance : 4000 </p> 
+        <form>
         <label>Transfer To Saving Account </label><br/>
         <input type="text" name="inputTransfer" id="inputTransfer"/><br/>
-        <button name="transfer" id="transferBtn"> Transfer </button>
+        </form>
+        <button name="transfer" type = "submit" id="transferBtn"> Transfer </button>
          </>  
   );
 }

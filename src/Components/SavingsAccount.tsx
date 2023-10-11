@@ -1,16 +1,19 @@
-import React from "react";
-
 const SavingsAccount = () => {
-    return (
-        <>
+  function Saving(props :number ){
+  
 
-        <p> Current Balance : 4000 </p> 
+  }
+  
+    return (
+        <div>
+
+        <p> Current Balance : 4000 </p> <br/>
         <form>
         <label>Transfer To Saving Account </label><br/>
-        <input type="text" name="inputTransfer" id="inputTransfer"/><br/>
+        <input type="text" name="inputTransfer" id="inputTransferId"/>
         </form>
-        <button name="transfer" type = "submit" id="transferBtn"> Transfer </button>
-         </>  
+        <button name="transferBtnName" id="transferBtnId" type="submit"> Transfer </button>
+         </div>  
   );
 }
 export default SavingsAccount;

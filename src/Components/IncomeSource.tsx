@@ -1,16 +1,16 @@
 import {useState , ChangeEvent , FormEvent } from 'react';
 import { EventHandler } from 'react';
-import { typesF } from './TypesF';
+import { ProgressProps} from './TypesF';
 
 
 const IncomeForm = () => {
-const [inCome ,setInCome]= useState <typesF>({
+const [inCome ,setInCome]= useState <ProgressProps >({
   source : '',
   amount: 0 ,
   date: '' ,
 
 });
- const[inComes , setInComes]=useState<typesF[]>([])
+ const[incomeList , setInComes]=useState<ProgressProps []>([])
 
 const handelChange =(event :ChangeEvent<HTMLInputElement>) => {
  const {name , value } = event.target;
@@ -39,7 +39,7 @@ const handelChange =(event :ChangeEvent<HTMLInputElement>) => {
               </div>
           </form>
          <ul>
-          {inComes.map((inCome , index)=>(
+          {incomeList.map((inCome , index)=>(
           <li key={index}>
                {inCome.source}: {inCome.amount} EUR :{inCome.date}</li>
          

@@ -11,8 +11,9 @@ const SavingsAccount = () => {
         <form>
         <label>Transfer To Saving Account </label><br/>
         <input type="text" name="inputTransfer" id="inputTransferId"/>
-        </form>
         <button name="transferBtnName" id="transferBtnId" type="submit"> Transfer </button>
+        </form>
+        
          </div>  
   );
 }

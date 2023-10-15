@@ -2,7 +2,7 @@ import React from "react";
 import {useState , ChangeEvent , FormEvent } from 'react';
 
 const savingTarget = () => {
-  const [target , setTarget] = useState(0);
+  let [target , setTarget] = useState(0);
 
   const handelChange =(event :ChangeEvent<HTMLInputElement>) => { 
   setTarget (Number(event.target.value));

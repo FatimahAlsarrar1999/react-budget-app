@@ -1,6 +1,6 @@
 
-export type  typesF = {
-    source: string ;
+export type  ProgressProps  = {
+      source: string ;
       amount: number ;
       date: string ;
   };

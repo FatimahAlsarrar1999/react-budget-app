@@ -1,7 +1,12 @@
 import React from "react";
 import {useState , ChangeEvent , FormEvent } from 'react';
+import App from "../App";
 
-const savingTarget = () => {
+type savingTypes  = {
+  Saving: number
+ }
+
+const savingTarget =  (props:savingTypes) => {
   let [target , setTarget] = useState(0);
 
   const handelChange =(event :ChangeEvent<HTMLInputElement>) => { 
@@ -21,10 +26,12 @@ const savingTarget = () => {
               <label htmlFor="amount">Set target</label><br/>
               <input type="number" name="amount" id="amount" value={target} onChange={handelChange}/>
             <button>Reset</button>
-          </form>
-          <p> Saving: "Transfer"</p>
+         
+          <p> Saving: {props.Saving}</p>
           <p>Target:{target}</p><br/>
-          <progress max="5000" value={target}/>
+          <p>progress is: {((props.Saving/target||1)*100)} % </p>
+          <progress max={target} value={props.Saving}/>
+          </form>
         </div>
 );
 };

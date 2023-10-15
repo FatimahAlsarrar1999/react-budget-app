@@ -5,25 +5,34 @@ import incomeSource from './Components/IncomeSource';
 import ExpenceSource from './Components/ExpenseSource';
 import SavingsAccount from './Components/SavingsAccount';
 import IncomeSource from './Components/IncomeSource';
+import {useState} from 'react';
 
 
-function App() {
+const App = ()=> {
   
-  //lifting state here is missing
+  const [saving , setSaving ]=useState(0)
+  const getSaving = (amount : number )=>{
+    setSaving(amount)
+  }
   return (
-    <div>
-    <div className='Formes'>
-     < IncomeSource/>
-     <ExpenceSource />
-     <Target/>
-      </div>
-    <div className='Balance'>
-      < SavingsAccount />
-      </div>
-    
+    <div> 
       
-       </div>
+      
+      <div className='Formes'>
+    
+     < IncomeSource />
+     <ExpenceSource />
+     <Target Saving={saving} />
+      </div>
+        <div id='Balance'>
+           < SavingsAccount  getSaving ={getSaving}  />
+            </div>   
+           
+      </div>
+   
+  
   );
+
 }
 
 export default App;

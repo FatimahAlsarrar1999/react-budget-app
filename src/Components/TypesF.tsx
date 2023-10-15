@@ -1,6 +1,5 @@
-
 export type  ProgressProps  = {
-      source: string ;
-      amount: number ;
-      date: string ;
-  };
+    source: string ;
+    amount: number ;
+    date: string ;
+};
